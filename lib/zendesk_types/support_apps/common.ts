@@ -7,7 +7,7 @@ export type Dimension =
 
 // Actions
 export type Resize = (dims: Dimension) => {
-    errors: any
+    errors: object
     resize: {
         width: string
         height: string
@@ -19,7 +19,7 @@ export type Create = (newInstance: {
     url: string
     size?: { width: string; height: string }
 }) => {
-    errors: any
+    errors: object
     "instances.create": Instance[]
 }
 
