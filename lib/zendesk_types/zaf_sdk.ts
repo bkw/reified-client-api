@@ -1,6 +1,7 @@
 import { Context, MetaData } from "./support_apps/common"
 
 export declare class Client {
+    constructor(options?: ClientConstructorOptions)
     /**
      * Requests context for the app, such as the host and location. Depending on the location, the context may provide additional identifiers that you can use with the REST API to request additional data.
      * @returns {any} A JavaScript Promise any.
@@ -134,4 +135,9 @@ export interface ClientRequestOptions {
     type?: string
     url: string
     xhrFields?: any
+}
+
+export interface ClientConstructorOptions {
+    origin: string
+    appGuid: string
 }
